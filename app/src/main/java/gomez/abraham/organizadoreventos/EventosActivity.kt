@@ -2,6 +2,7 @@ package gomez.abraham.organizadoreventos
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.widget.Button
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -40,6 +41,10 @@ private lateinit var binding: ActivityEventosBinding
             var intent = Intent(this, AgregarTareaActivity::class.java)
             startActivity(intent)
         }
+
+        //Buttons Navbar
+        val guestsButton: Button = findViewById(R.id.boton_invitados)
+
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_eventos)
@@ -53,6 +58,11 @@ private lateinit var binding: ActivityEventosBinding
 
 
 
+        // OnClickListener to InvitadosActivity
+        guestsButton.setOnClickListener {
+            val intent = Intent(this, Invitados::class.java)
+            startActivity(intent)
+        }
 
     }
 
