@@ -1,3 +1,37 @@
 <resources>
     <string name="app_name">OrganizadorEventos</string>
+
+    <!-- Login & Register -->
+    <string name="email">Correo</string>
+    <string name="password">Contraseña</string>
+    <!-- Login -->
+    <string name="login">Entrar</string>
+    <string name="dont_have_account">¿No tienes una cuenta? <b>Registrarse</b></string>
+    <string name="forgot_password">¿Has olvidado la contraseña?</string>
+    <!-- Register -->
+    <string name="register">Registrarse</string>
+    <string name="already_have_account">¿Ya tienes una cuenta? <b>Entrar</b></string>
+    <!-- Term and conditions -->
+    <string name="tnc_title">Términos y condiciones</string>
+    <string name="terms_and_conditions">Al continuar, acepto los <u>términos de servicio</u> y he leído la <u>política de privacidad</u></string>
+
+    <!-- general -->
+    <string name="accept">Aceptar</string>
+    <string name="cancel">Cancelar</string>
+
+    <!-- Eventos -->
+    <string name="title_activity_eventos">EventosActivity</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Menu -->
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
 </resources>
