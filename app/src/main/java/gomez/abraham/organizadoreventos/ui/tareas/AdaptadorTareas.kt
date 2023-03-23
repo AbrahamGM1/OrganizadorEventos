@@ -1,4 +1,4 @@
-package gomez.abraham.organizadoreventos.ui.eventos
+package gomez.abraham.organizadoreventos.ui.tareas
 
 import android.content.Context
 import android.view.LayoutInflater
@@ -7,35 +7,37 @@ import android.view.ViewGroup
 import android.widget.BaseAdapter
 import gomez.abraham.organizadoreventos.R
 import kotlinx.android.synthetic.main.layout_evento.view.*
-import kotlinx.android.synthetic.main.nav_header_eventos.view.*
+import kotlinx.android.synthetic.main.layout_tareas.view.*
 
-class AdaptadorEventos: BaseAdapter {
+class AdaptadorTareas: BaseAdapter {
 
     var context: Context
-    var Eventos = ArrayList<Evento>()
+    var tareas = ArrayList<Tarea>()
 
-    constructor(context: Context,eventos:ArrayList<Evento>){
+    constructor(context: Context, tareas:ArrayList<Tarea>){
         this.context = context
-        this.Eventos = eventos
+        this.tareas = tareas
     }
 
     override fun getCount(): Int {
-        return Eventos.size
+        return tareas.size
     }
 
     override fun getItem(p0: Int): Any {
-    return Eventos[p0]
+        return tareas[p0]
     }
 
     override fun getItemId(p0: Int): Long {
-    return p0.toLong()
+        return p0.toLong()
     }
 
     override fun getView(p0: Int, p1: View?, p2: ViewGroup?): View {
         var inflador = LayoutInflater.from(context)
-        var vista = inflador.inflate(R.layout.layout_evento,null)
-        var evento = Eventos[p0]
-        vista.tv_evento.text = evento.nombreEvento
+        var vista = inflador.inflate(R.layout.layout_tareas,null)
+        var tarea = tareas[p0]
+        vista.check_tarea.isChecked = tarea.completada
+        vista.tv_nombre_tarea.text = tarea.nombre
+        vista.tv_fecha_tarea.text = tarea.fecha
 
         return vista
     }

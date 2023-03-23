@@ -1,4 +1,5 @@
 package gomez.abraham.organizadoreventos
+import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import com.google.android.material.snackbar.Snackbar
@@ -11,8 +12,17 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
 import gomez.abraham.organizadoreventos.databinding.ActivityEventosBinding
+import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
+import gomez.abraham.organizadoreventos.ui.eventos.Evento
+import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
+import gomez.abraham.organizadoreventos.ui.tareas.Tarea
+import kotlinx.android.synthetic.main.fragment_eventos.*
+import kotlinx.android.synthetic.main.fragment_tareas.*
 
 class EventosActivity : AppCompatActivity() {
+
+
+
 
     private lateinit var appBarConfiguration: AppBarConfiguration
 private lateinit var binding: ActivityEventosBinding
@@ -24,10 +34,11 @@ private lateinit var binding: ActivityEventosBinding
      setContentView(binding.root)
 
         setSupportActionBar(binding.appBarEventos.toolbar)
-
         binding.appBarEventos.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                     .setAction("Action", null).show()
+            var intent = Intent(this, AgregarTareaActivity::class.java)
+            startActivity(intent)
         }
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -38,7 +49,15 @@ private lateinit var binding: ActivityEventosBinding
             R.id.nav_eventos, R.id.nav_tarea, R.id.nav_presupuesto), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
+
+
+
+
+
     }
+
+
+
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.

@@ -9,7 +9,12 @@
         android:id="@+id/nav_eventos"
         android:name="gomez.abraham.organizadoreventos.ui.eventos.EventosFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_eventos" />
+        tools:layout="@layout/fragment_eventos" >
+        <action
+            android:id="@+id/action_nav_eventos_to_nav_tarea"
+            app:destination="@id/nav_tarea"
+            app:popUpTo="@id/nav_tarea" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_tarea"
@@ -19,7 +24,7 @@
 
     <fragment
         android:id="@+id/nav_presupuesto"
-        android:name="gomez.abraham.organizadoreventos.ui.slideshow.SlideshowFragment"
+        android:name="gomez.abraham.organizadoreventos.ui.slideshow.PresupuestoFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_presupuesto" />
 </navigation>

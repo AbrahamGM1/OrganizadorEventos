@@ -8,10 +8,10 @@
             android:id="@+id/nav_eventos"
             android:title="Eventos" />
         <item
-            android:id="@+id/nav_tareas"
+            android:id="@+id/nav_tarea"
             android:title="Tareas" />
         <item
-            android:id="@+id/nav_tarea"
+            android:id="@+id/nav_invitados"
             android:title="Invitados" />
         <item
             android:id="@+id/nav_presupuesto"
