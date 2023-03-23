@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/nav_eventos">
+
+    <fragment
+        android:id="@+id/nav_eventos"
+        android:name="gomez.abraham.organizadoreventos.ui.eventos.EventosFragment"
+        android:label="@string/menu_home"
+        tools:layout="@layout/fragment_eventos" />
+
+    <fragment
+        android:id="@+id/nav_tarea"
+        android:name="gomez.abraham.organizadoreventos.ui.tareas.TareasFragment"
+        android:label="@string/menu_gallery"
+        tools:layout="@layout/fragment_tareas" />
+
+    <fragment
+        android:id="@+id/nav_presupuesto"
+        android:name="gomez.abraham.organizadoreventos.ui.slideshow.SlideshowFragment"
+        android:label="@string/menu_slideshow"
+        tools:layout="@layout/fragment_presupuesto" />
+</navigation>
