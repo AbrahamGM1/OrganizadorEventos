@@ -33,7 +33,7 @@ class RegistroActivity : AppCompatActivity() {
             val btnCancelarTerminosCondiciones: TextView = view.findViewById(R.id.cancel)
 
             btnAceptarTerminosCondiciones.setOnClickListener {
-                val intent = Intent(this, MainActivity::class.java)
+                val intent = Intent(this, EventosActivity::class.java)
                 startActivity(intent)
                 finish()
             }
