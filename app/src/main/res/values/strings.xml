@@ -49,6 +49,16 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
+    
+    <!-- Settings -->
+    <string name="edit_user_name">Editar nombre de usuario</string>
+    <string name="edit_email">Editar correo electrónico</string>
+    <string name="edit_password">Editar contraseña</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="settings_language">Lenguaje</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_delete_account">Eliminar cuenta</string>
+
 
 
 </resources>
