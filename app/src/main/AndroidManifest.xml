@@ -12,7 +12,15 @@
             android:theme="@style/Theme.OrganizadorEventos"
             tools:targetApi="31">
         <activity
+            android:name=".Invitados"
+            android:exported="true" />
 
+        <activity
+            android:name=".AgregarInvitado"
+            android:exported="false"
+            android:parentActivityName=".Invitados"
+            />
+        <activity
             android:name=".EditarTareaActivity"
             android:exported="false" />
         <activity
