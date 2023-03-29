@@ -19,7 +19,7 @@ class RegistroActivity : AppCompatActivity() {
         val email: EditText = findViewById(R.id.email)
         val password: EditText = findViewById(R.id.password)
         val btnRegister: Button = findViewById(R.id.sign_up_button)
-        val alreadyHaveAccount: TextView = findViewById(R.id.already_have_account)
+        val alreadyHaveAccount: Button = findViewById(R.id.sign_in_button)
 
         //Set event listeners
         btnRegister.setOnClickListener {

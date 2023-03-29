@@ -6,56 +6,81 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
+    android:background="@drawable/background_gradient"
     tools:context=".RegistroActivity"
 >
 
     <!-- Register form with a button and a link to the login activity -->
     <ImageView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
         android:layout_gravity="center"
-        android:layout_marginTop="50dp"
-        android:src="@drawable/ic_launcher_background"
+        android:layout_marginTop="40dp"
+        android:src="@drawable/logo"
     />
     <View
         android:id="@+id/divider"
         android:layout_width="match_parent"
-        android:layout_height="1dp"
+        android:layout_height="2dp"
         android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="100dp"
-        android:background="?android:attr/listDivider"
+        android:layout_marginTop="15dp"
+        android:background="@color/white"
     />
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/rounded_border"
+            android:hint="@string/username"
+            android:inputType="textEmailAddress"
+        />
         <EditText
             android:id="@+id/email"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginHorizontal="15dp"
-            android:layout_marginTop="80dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_border"
             android:hint="@string/email"
             android:inputType="textEmailAddress"
         />
         <EditText
             android:id="@+id/password"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="40dp"
             android:layout_marginHorizontal="15dp"
             android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_border"
             android:hint="@string/password"
             android:inputType="textPassword"
         />
+        <EditText
+            android:id="@+id/confirm_password"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="20dp"
+            android:background="@drawable/rounded_border"
+            android:hint="@string/password"
+            android:inputType="textPassword"
+        />
+        <TextView
+                android:id="@+id/remember_me"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginTop="15dp"
+                android:text="@string/remember_me"
+                android:textColor="@color/white"
+        />
     <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="90dp"
-        android:background="?android:attr/listDivider"
-    />
-    <View
-        android:layout_width="match_parent"
-        android:layout_height="1dp"
-        android:layout_marginHorizontal="55dp"
-        android:layout_marginTop="10dp"
-        android:background="?android:attr/listDivider"
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginHorizontal="15dp"
+            android:layout_marginTop="10dp"
+            android:background="@color/white"
     />
     <Button
         android:id="@+id/sign_up_button"
@@ -65,16 +90,17 @@
         android:layout_marginTop="20dp"
         android:text="@string/register"
         android:textColor="@android:color/white"
+        android:background="@drawable/rounded_border"
     />
-    <TextView
-        android:id="@+id/already_have_account"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="15dp"
-        android:layout_marginTop="20dp"
-        android:gravity="center"
-        android:text="@string/already_have_account"
-        android:textColor="@android:color/holo_blue_dark"
+    <Button
+            android:id="@+id/sign_in_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="35dp"
+            android:layout_marginTop="20dp"
+            android:text="@string/login"
+            android:textColor="@android:color/white"
+            android:background="@drawable/rounded_border"
     />
 
 </LinearLayout>
