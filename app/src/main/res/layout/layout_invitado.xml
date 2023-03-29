@@ -25,6 +25,7 @@
             >
 
             <TextView
+                android:id="@+id/guest_name"
                 android:layout_marginHorizontal="5dp"
                 android:layout_column="0"
                 android:layout_row="0"
@@ -37,6 +38,7 @@
                 />
 
             <TextView
+                android:id="@+id/invitation_to_confirm"
                 android:layout_column="1"
                 android:layout_row="0"
                 android:layout_width="wrap_content"
