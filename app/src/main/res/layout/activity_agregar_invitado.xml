@@ -92,16 +92,20 @@
     </GridLayout>
 
     <TextView
+        android:layout_marginTop="10dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tipo de Menú"
+        android:layout_marginHorizontal="10dp"
+        android:textSize="16sp"
+        />
+
+    <Spinner android:id="@+id/menu_spinner"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginHorizontal="10dp"
-        android:text = "Tipo de menú"
-        android:textSize="16sp"
-        android:background="#71808d"
-        android:layout_marginTop="10dp"
-        android:layout_gravity="center_horizontal"
-        android:textColor="@color/white"
-        android:paddingHorizontal="10sp"
+        android:spinnerMode="dropdown"
+
         />
 
     <TextView
