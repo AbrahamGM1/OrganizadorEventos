@@ -16,22 +16,36 @@
             android:exported="true" />
 
         <activity
-            android:name=".AgregarInvitado"
-            android:exported="false"
-            android:parentActivityName=".InvitadosFragment"
-            />
+                android:name=".CambiarClaveActivity"
+                android:exported="false">
+            <meta-data
+                    android:name="android.app.lib_name"
+                    android:value=""/>
+        </activity>
         <activity
-            android:name=".EditarTareaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".AgregarTareaActivity"
-            android:exported="false" />
-        <activity
-            android:name=".EventosActivity"
-            android:exported="false"
-            android:label="@string/title_activity_eventos"
-            android:theme="@style/Theme.OrganizadorEventos.NoActionBar" />
+                android:name=".RecuperarClaveActivity"
+                android:exported="false">
+            <meta-data
+                    android:name="android.app.lib_name"
+                    android:value=""/>
+        </activity>
 
+
+        <activity
+                android:name=".AgregarInvitado"
+                android:exported="false"
+                android:parentActivityName=".InvitadosFragment"/>
+        <activity
+                android:name=".EditarTareaActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".AgregarTareaActivity"
+                android:exported="false"/>
+        <activity
+                android:name=".EventosActivity"
+                android:exported="false"
+                android:label="@string/title_activity_eventos"
+                android:theme="@style/Theme.OrganizadorEventos.NoActionBar"/>
         <activity
                 android:name=".InicioSesionActivity"
                 android:exported="false">
