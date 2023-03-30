@@ -58,11 +58,6 @@ private lateinit var binding: ActivityEventosBinding
 
 
 
-        // OnClickListener to InvitadosActivity
-        guestsButton.setOnClickListener {
-            val intent = Intent(this, Invitados::class.java)
-            startActivity(intent)
-        }
 
     }
 
