@@ -7,7 +7,7 @@
     android:orientation="vertical"
     android:background="@color/color_primary_dark">
 
-    <ImageView
+    <ImageView android:id="@+id/profile_imageView"
         android:layout_marginTop="20dp"
         android:layout_width="150dp"
         android:layout_height="150dp"

@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".EditarCorreoActivity"
+    android:orientation="vertical"
+    android:background="@android:color/white"
+    >
+
+    <LinearLayout
+        android:layout_marginTop="50dp"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:orientation="vertical"
+        >
+
+        <EditText android:id="@+id/new_email_et"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_primary_dark"
+            android:layout_gravity="center"
+            android:hint="Nuevo correo electrónico"
+            android:textColorHint="@android:color/white"
+            android:textSize="20sp"
+            android:paddingStart="20dp"
+            />
+
+        <EditText android:id="@+id/confirm_email_et"
+            android:layout_marginTop="20dp"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:background="@color/color_primary_dark"
+            android:hint="Confirmar correo electrónico"
+            android:textColorHint="@android:color/white"
+            android:textSize="20sp"
+            android:paddingStart="20dp"
+            />
+
+    </LinearLayout>
+
+    <Button android:id="@+id/save_new_email_button"
+        android:layout_marginTop="100dp"
+        android:layout_width="250dp"
+        android:layout_height="50dp"
+        android:background="@drawable/rounded_button"
+        android:text="@string/save_button"
+        android:textColor="@color/color_text_primary"
+        android:layout_gravity="center"
+        android:textSize="18sp"
+        />
+
+</LinearLayout>

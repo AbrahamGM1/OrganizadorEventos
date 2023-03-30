@@ -35,6 +35,7 @@
     <!-- general -->
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="save_button">Guardar</string>
 
     <!-- Eventos -->
     <string name="title_activity_eventos">EventosActivity</string>
@@ -49,7 +50,7 @@
     <string name="menu_home">Home</string>
     <string name="menu_gallery">Gallery</string>
     <string name="menu_slideshow">Slideshow</string>
-    
+
     <!-- Settings -->
     <string name="edit_user_name">Editar nombre de usuario</string>
     <string name="edit_email">Editar correo electrónico</string>
