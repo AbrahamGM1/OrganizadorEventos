@@ -1,8 +1,11 @@
 package gomez.abraham.organizadoreventos
+import android.content.ClipData
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -19,6 +22,7 @@ import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
 import gomez.abraham.organizadoreventos.ui.tareas.Tarea
 import kotlinx.android.synthetic.main.fragment_eventos.*
 import kotlinx.android.synthetic.main.fragment_tareas.*
+import org.w3c.dom.Text
 
 class EventosActivity : AppCompatActivity() {
 
@@ -74,4 +78,17 @@ private lateinit var binding: ActivityEventosBinding
         val navController = findNavController(R.id.nav_host_fragment_content_eventos)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_settings -> {
+                var intent = Intent(this, AjustesActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
 }
