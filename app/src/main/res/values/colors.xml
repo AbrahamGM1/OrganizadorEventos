@@ -8,4 +8,14 @@
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
     <color name="colorPrimary">#FF6200EE</color>
+
+    <!-- App colors -->
+    <color name="color_primary_dark">#4A98B5</color>
+    <color name="color_primary">#64BACE</color>
+    <color name="color_primary_light">#A4D8E1</color>
+
+    <!-- Text color -->
+    <color name="color_text_primary">#4F5D67</color>
+    <color name="color_text_secondary">#1B3C5B</color>
+
 </resources>

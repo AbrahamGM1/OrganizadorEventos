@@ -10,7 +10,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="horizontal"
-        android:background="@color/purple_200"
+        android:background="@color/color_primary_dark"
+        android:layout_marginLeft="12dp"
+        android:layout_marginRight="12dp"
         >
 
         <CheckBox
@@ -39,14 +41,7 @@
             android:layout_marginLeft="20dp"
             />
 
-        <TextView
-            android:id="@+id/tv_fecha_tarea"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="fecha"
-            android:layout_gravity="bottom"
 
-            />
 
 
 

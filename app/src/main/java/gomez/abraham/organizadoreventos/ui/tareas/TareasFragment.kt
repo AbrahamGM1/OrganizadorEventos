@@ -44,11 +44,11 @@ private var _binding: FragmentTareasBinding? = null
   }
 
     fun tareasDePrueba(){
-        tareas.add(Tarea(false, "prueba de tarea 1", "23/03/2023"))
-        tareas.add(Tarea(false, "prueba de tarea 2", "23/03/2023"))
-        tareas.add(Tarea(false, "prueba de tarea 3", "23/03/2023"))
-        tareas.add(Tarea(false, "prueba de tarea 4", "23/03/2023"))
-        tareas.add(Tarea(false, "prueba de tarea 5", "23/03/2023"))
+        tareas.add(Tarea(false, "prueba de tarea 1"))
+        tareas.add(Tarea(false, "prueba de tarea 2"))
+        tareas.add(Tarea(false, "prueba de tarea 3"))
+        tareas.add(Tarea(false, "prueba de tarea 4"))
+        tareas.add(Tarea(false, "prueba de tarea 5"))
 
     }
 

@@ -1,4 +1,5 @@
 package gomez.abraham.organizadoreventos
+import ViewPagerAdapter
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -12,27 +13,46 @@ import androidx.navigation.ui.setupActionBarWithNavController
 import androidx.navigation.ui.setupWithNavController
 import androidx.drawerlayout.widget.DrawerLayout
 import androidx.appcompat.app.AppCompatActivity
+import com.google.android.material.tabs.TabLayoutMediator
 import gomez.abraham.organizadoreventos.databinding.ActivityEventosBinding
 import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
 import gomez.abraham.organizadoreventos.ui.eventos.Evento
 import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
 import gomez.abraham.organizadoreventos.ui.tareas.Tarea
 import kotlinx.android.synthetic.main.fragment_eventos.*
+import kotlinx.android.synthetic.main.fragment_presupuesto.*
+import kotlinx.android.synthetic.main.fragment_presupuesto.view.*
 import kotlinx.android.synthetic.main.fragment_tareas.*
 
 class EventosActivity : AppCompatActivity() {
 
 
 
-
     private lateinit var appBarConfiguration: AppBarConfiguration
-private lateinit var binding: ActivityEventosBinding
+    private lateinit var binding: ActivityEventosBinding
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-     binding = ActivityEventosBinding.inflate(layoutInflater)
-     setContentView(binding.root)
+        binding = ActivityEventosBinding.inflate(layoutInflater)
+        setContentView(binding.root)
+        /////////tabs
+        val adapter:ViewPagerAdapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
+//            view_pager.adapter = adapter
+
+
+     //   TabLayoutMediator(tab_layout,view_pager){tab,position ->
+   //         when(position){
+   //             0->tab.text = "Tareas"
+  //              1->tab.text = "Invitados"
+ //              2->tab.text = "Presupuesto"
+ //           }
+//        }.attach()
+
+
+        //////
+
 
         setSupportActionBar(binding.appBarEventos.toolbar)
         binding.appBarEventos.fab.setOnClickListener { view ->
@@ -43,7 +63,7 @@ private lateinit var binding: ActivityEventosBinding
         }
 
         //Buttons Navbar
-        val guestsButton: Button = findViewById(R.id.boton_invitados)
+        //val guestsButton: Button = findViewById(R.id.boton_invitados)
 
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
@@ -59,14 +79,12 @@ private lateinit var binding: ActivityEventosBinding
 
 
         // OnClickListener to InvitadosActivity
-        guestsButton.setOnClickListener {
-            val intent = Intent(this, Invitados::class.java)
-            startActivity(intent)
-        }
+       // guestsButton.setOnClickListener {
+       //     val intent = Intent(this, Invitados::class.java)
+      //      startActivity(intent)
+       // }
 
     }
-
-
 
 
     override fun onCreateOptionsMenu(menu: Menu): Boolean {

@@ -9,52 +9,87 @@
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint="Título de la tarea"
+        android:hint=" Título de la tarea"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         />
 
     <EditText
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint="Información extra"
+        android:hint=" Información extra"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
         />
 
     <LinearLayout
         android:layout_marginTop="20dp"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:orientation="horizontal"
         android:layout_gravity="center"
+
         >
 
         <EditText
             android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Fecha"
+            android:layout_height="45dp"
+            android:hint=" Fecha"
             android:layout_marginRight="20dp"
+            android:background="@color/color_primary_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
         <EditText
             android:layout_width="130dp"
-            android:layout_height="wrap_content"
-            android:hint="Color"
+            android:layout_height="45dp"
+            android:hint=" Color"
             android:layout_marginLeft="20dp"
+            android:background="@color/color_primary_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
+
+
 
     </LinearLayout>
 
     <EditText
         android:id="@+id/attachment_bar"
         android:layout_width="300dp"
-        android:layout_height="wrap_content"
+        android:layout_height="45dp"
         android:drawablePadding="8dp"
-        android:hint="Adjuntar archivo..."
+        android:hint=" Adjuntar imagen..."
         android:layout_marginTop="20dp"
         android:layout_gravity="center"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        />
+
+    <ImageView
+        android:id="@+id/img_evento"
+        android:layout_marginTop="15dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_evento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Vista previa"
         />
 
     <Button
@@ -63,9 +98,10 @@
         android:layout_height="60dp"
         android:layout_gravity="center"
         android:text="Editar"
+        android:background="@drawable/round_button_tarea"
         android:textSize="20sp"
+        android:textColor="@color/color_text_primary"
         android:textAllCaps="false"/>
-
 
 
 </LinearLayout>
