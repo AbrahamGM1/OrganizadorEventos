@@ -19,6 +19,7 @@ import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
 import gomez.abraham.organizadoreventos.ui.eventos.Evento
 import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
 import gomez.abraham.organizadoreventos.ui.tareas.Tarea
+import kotlinx.android.synthetic.main.fragment_tabs.*
 import kotlinx.android.synthetic.main.fragment_eventos.*
 import kotlinx.android.synthetic.main.fragment_presupuesto.*
 import kotlinx.android.synthetic.main.fragment_presupuesto.view.*
@@ -70,7 +71,7 @@ class EventosActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_eventos)
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
-        appBarConfiguration = AppBarConfiguration(setOf(
+        appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_menu,
             R.id.nav_eventos, R.id.nav_tarea, R.id.nav_presupuesto), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
