@@ -17,7 +17,7 @@ import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.appbar.AppBarLayout
 import com.google.android.material.tabs.TabLayout
 import com.google.android.material.tabs.TabLayoutMediator
-import gomez.abraham.organizadoreventos.Invitados
+import gomez.abraham.organizadoreventos.InvitadosFragment
 import gomez.abraham.organizadoreventos.R
 import gomez.abraham.organizadoreventos.databinding.FragmentPresupuestoBinding
 import gomez.abraham.organizadoreventos.ui.eventos.EventosFragment
