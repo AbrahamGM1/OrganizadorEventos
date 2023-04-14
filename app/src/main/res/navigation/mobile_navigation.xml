@@ -19,6 +19,12 @@
         <action
             android:id="@+id/action_nav_menu_to_nav_tarea"
             app:destination="@id/nav_tarea" />
+        <action
+            android:id="@+id/action_nav_menu_to_invitadosFragment"
+            app:destination="@id/nav_invitados" />
+        <action
+            android:id="@+id/action_nav_menu_to_nav_invitados"
+            app:destination="@id/nav_invitados" />
     </fragment>
 
     <fragment
@@ -38,4 +44,9 @@
         android:name="gomez.abraham.organizadoreventos.ui.slideshow.PresupuestoFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_presupuesto" />
+    <fragment
+        android:id="@+id/nav_invitados"
+        android:name="gomez.abraham.organizadoreventos.InvitadosFragment"
+        android:label="Invitados"
+        tools:layout="@layout/fragment_invitados" />
 </navigation>

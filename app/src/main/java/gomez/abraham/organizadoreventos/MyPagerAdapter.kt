@@ -12,7 +12,7 @@ class MyPagerAdapter(fm: FragmentManager) : FragmentPagerAdapter(fm, BEHAVIOR_RE
     private val fragments = listOf(
         EventosFragment(),
         TareasFragment(),
-        PresupuestoFragment()
+        InvitadosFragment()
     )
 
     override fun getItem(position: Int): Fragment {

@@ -34,6 +34,7 @@ private var _binding: FragmentTareasBinding? = null
 
     _binding = FragmentTareasBinding.inflate(inflater, container, false)
     val root: View = binding.root
+      tareas.clear()
     tareasDePrueba()
     var listView: ListView = binding.listviewTareas
     tareasViewModel.text.observe(viewLifecycleOwner) {
@@ -49,7 +50,6 @@ private var _binding: FragmentTareasBinding? = null
         tareas.add(Tarea(false, "prueba de tarea 3"))
         tareas.add(Tarea(false, "prueba de tarea 4"))
         tareas.add(Tarea(false, "prueba de tarea 5"))
-
     }
 
 
