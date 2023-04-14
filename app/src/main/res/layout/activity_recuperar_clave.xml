@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/background_gradient"
+    tools:context=".RecuperarClaveActivity"
+>
+
+
+    <View
+        android:id="@+id/divider"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="100dp"
+        android:background="@color/white"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:text="@string/forgot_password"
+        android:textColor="@color/white"
+        android:textSize="50sp"
+        android:textAlignment="center"
+    />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginHorizontal="15dp"
+        android:text="@string/forgot_password_description"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+    />
+    <EditText
+        android:id="@+id/email"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginHorizontal="15dp"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/rounded_border"
+        android:hint="@string/email"
+        android:inputType="textEmailAddress"
+    />
+    <View
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"/>
+    <Button
+        android:id="@+id/send_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginHorizontal="35dp"
+        android:layout_marginBottom="60dp"
+        android:background="@drawable/rounded_border"
+        android:text="@string/send_code"
+        android:textColor="@color/color_text_primary"
+    />
+
+</LinearLayout>

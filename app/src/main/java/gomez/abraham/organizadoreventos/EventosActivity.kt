@@ -1,9 +1,12 @@
 package gomez.abraham.organizadoreventos
 import ViewPagerAdapter
+import android.content.ClipData
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
+import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
 import androidx.navigation.findNavController
@@ -24,6 +27,7 @@ import kotlinx.android.synthetic.main.fragment_eventos.*
 import kotlinx.android.synthetic.main.fragment_presupuesto.*
 import kotlinx.android.synthetic.main.fragment_presupuesto.view.*
 import kotlinx.android.synthetic.main.fragment_tareas.*
+import org.w3c.dom.Text
 
 class EventosActivity : AppCompatActivity() {
 
@@ -58,7 +62,7 @@ class EventosActivity : AppCompatActivity() {
         setSupportActionBar(binding.appBarEventos.toolbar)
         binding.appBarEventos.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                    .setAction("Action", null).show()
+                .setAction("Action", null).show()
             var intent = Intent(this, AgregarTareaActivity::class.java)
             startActivity(intent)
         }
@@ -75,7 +79,6 @@ class EventosActivity : AppCompatActivity() {
             R.id.nav_eventos, R.id.nav_eventos, R.id.nav_eventos), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
 
 
 
@@ -98,4 +101,17 @@ class EventosActivity : AppCompatActivity() {
         val navController = findNavController(R.id.nav_host_fragment_content_eventos)
         return navController.navigateUp(appBarConfiguration) || super.onSupportNavigateUp()
     }
+
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        when(item.itemId){
+            R.id.action_settings -> {
+                var intent = Intent(this, AjustesActivity::class.java)
+                startActivity(intent)
+            }
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
+
+
 }

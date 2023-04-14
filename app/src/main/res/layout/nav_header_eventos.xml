@@ -13,7 +13,7 @@
     android:orientation="vertical"
     android:gravity="bottom">
 
-    <TextView
+    <TextView android:id="@+id/setting_button"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_gravity="right"

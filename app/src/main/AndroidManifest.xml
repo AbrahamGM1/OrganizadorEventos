@@ -17,8 +17,44 @@
             android:label="@string/title_activity_ejemplo_eventos"
             android:theme="@style/Theme.OrganizadorEventos.NoActionBar" />
         <activity
-            android:name=".Invitados"
+            android:name=".EditarContraseniaActivity"
+            android:exported="false"
+            android:parentActivityName=".AjustesActivity"
+            />
+        <activity
+            android:name=".EditarCorreoActivity"
+            android:exported="false"
+            android:parentActivityName=".AjustesActivity"
+            />
+        <activity
+            android:name=".EditarNombreUsuario"
+            android:exported="false"
+            android:parentActivityName=".AjustesActivity"
+            />
+        <activity
+            android:name=".AjustesActivity"
+            android:exported="false" />
+        <activity
+            android:name=".InvitadosFragment"
             android:exported="true" />
+
+        <activity
+                android:name=".CambiarClaveActivity"
+                android:exported="false">
+
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+        <activity
+            android:name=".RecuperarClaveActivity"
+            android:exported="false">
+            <meta-data
+                android:name="android.app.lib_name"
+                android:value="" />
+        </activity>
+
+
         <activity
             android:name=".AgregarInvitado"
             android:exported="false"

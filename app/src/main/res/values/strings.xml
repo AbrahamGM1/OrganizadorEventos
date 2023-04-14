@@ -2,22 +2,40 @@
     <string name="app_name">OrganizadorEventos</string>
 
     <!-- Login & Register -->
-    <string name="email">Correo</string>
+    <string name="username">Nombre de usuario</string>
     <string name="password">Contraseña</string>
+
     <!-- Login -->
     <string name="login">Entrar</string>
-    <string name="dont_have_account">¿No tienes una cuenta? <b>Registrarse</b></string>
+    <string name="dont_have_account">¿No tienes una cuenta?
+        <b>Registrarse</b>
+    </string>
     <string name="forgot_password">¿Has olvidado la contraseña?</string>
+    <string name="remember_me">Recordar cuenta</string>
     <!-- Register -->
     <string name="register">Registrarse</string>
-    <string name="already_have_account">¿Ya tienes una cuenta? <b>Entrar</b></string>
+    <string name="already_have_account">¿Ya tienes una cuenta?
+        <b>Entrar</b>
+    </string>
+    <string name="email">Correo</string>
+    <string name="repeat_password">Repetir contraseña</string>
     <!-- Term and conditions -->
     <string name="tnc_title">Términos y condiciones</string>
-    <string name="terms_and_conditions">Al continuar, acepto los <u>términos de servicio</u> y he leído la <u>política de privacidad</u></string>
-
+    <string name="terms_and_conditions">Al continuar, acepto los <u>términos de servicio</u> y he leído la
+        <u>política de privacidad</u>
+    </string>
+    <!-- Forgot password -->
+    <string name="forgot_password_description">¡No te preocupes, te enviaremos un código a tu correo para que puedas
+        restablecer tu contraseña!
+    </string>
+    <string name="send_code">Enviar código</string>
+    <!-- Reset password -->
+    <string name="new_password">Nueva contraseña</string>
+    <string name="reset_password">Restablecer contraseña</string>
     <!-- general -->
     <string name="accept">Aceptar</string>
     <string name="cancel">Cancelar</string>
+    <string name="save_button">Guardar</string>
 
     <!-- Eventos -->
     <string name="title_activity_eventos">EventosActivity</string>
@@ -35,8 +53,20 @@
     <string name="title_activity_ejemplo_eventos">EjemploEventos</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <!-- Settings -->
+    <string name="edit_user_name">Editar nombre de usuario</string>
+    <string name="edit_email">Editar correo electrónico</string>
+    <string name="edit_password">Editar contraseña</string>
+    <string name="logout">Cerrar sesión</string>
+    <string name="settings_language">Lenguaje</string>
+    <string name="settings_notifications">Notificaciones</string>
+    <string name="settings_delete_account">Eliminar cuenta</string>
+
 
 
 </resources>

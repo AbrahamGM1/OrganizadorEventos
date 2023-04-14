@@ -19,7 +19,7 @@ class InicioSesionActivity : AppCompatActivity() {
         val password: EditText = findViewById(R.id.password)
         val btnIniciarSesion: Button = findViewById(R.id.login_button)
         val btnOlvideContraseña: TextView = findViewById(R.id.forgot_password)
-        val btnRegistrarse: TextView = findViewById(R.id.sign_up)
+        val btnRegistrarse: Button = findViewById(R.id.register_button)
 
         //Set event listeners
         btnIniciarSesion.setOnClickListener {
@@ -45,6 +45,12 @@ class InicioSesionActivity : AppCompatActivity() {
 
         btnRegistrarse.setOnClickListener {
             val intent = Intent(this, RegistroActivity::class.java)
+            startActivity(intent)
+            finish()
+        }
+
+        btnOlvideContraseña.setOnClickListener {
+            val intent = Intent(this, RecuperarClaveActivity::class.java)
             startActivity(intent)
             finish()
         }
