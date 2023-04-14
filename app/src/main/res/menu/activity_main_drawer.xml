@@ -9,11 +9,13 @@
         <item
             android:id="@+id/nav_menu"
             android:title="Menu"
+            android:visible="false"
             />
 
         <item
             android:id="@+id/nav_eventos"
             android:title="Eventos"
+            android:visible="false"
             />
         <item
             android:id="@+id/nav_tarea"

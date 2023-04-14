@@ -72,7 +72,7 @@ class EventosActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_menu,
-            R.id.nav_eventos, R.id.nav_tarea, R.id.nav_presupuesto), drawerLayout)
+            R.id.nav_eventos, R.id.nav_eventos, R.id.nav_eventos), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
 
