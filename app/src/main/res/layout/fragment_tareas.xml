@@ -10,43 +10,6 @@
 
     <LinearLayout
         android:layout_width="match_parent"
-        android:orientation="horizontal"
-        android:layout_height="wrap_content">
-
-        <Button
-            android:id="@+id/boton_tareas"
-            android:layout_width="0dp"
-            android:layout_height="65dp"
-            android:layout_weight="1"
-            android:text="Tareas"
-            android:textAllCaps="false"
-            android:layout_gravity="fill_vertical"
-            android:layout_marginRight="1dp" />
-
-        <Button
-            android:id="@+id/boton_invitados"
-            android:layout_width="0dp"
-            android:layout_height="65dp"
-            android:layout_weight="1"
-            android:text="Invitados y contratistas"
-            android:textAllCaps="false"
-            android:layout_gravity="fill_vertical"
-            />
-
-        <Button
-            android:id="@+id/boton_presupuesto"
-            android:layout_width="0dp"
-            android:layout_height="65dp"
-            android:layout_weight="1"
-            android:text="Presupuesto"
-            android:layout_gravity="fill_vertical"
-            android:textAllCaps="false"
-            android:layout_marginLeft="1dp" />
-
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical"
         >

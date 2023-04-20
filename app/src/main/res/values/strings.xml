@@ -47,9 +47,14 @@
     <string name="action_settings">Settings</string>
 
     <!-- Menu -->
-    <string name="menu_home">Home</string>
-    <string name="menu_gallery">Gallery</string>
-    <string name="menu_slideshow">Slideshow</string>
+    <string name="menu_home">Eventos</string>
+    <string name="menu_gallery">Tareas</string>
+    <string name="menu_slideshow">Presupuesto</string>
+    <string name="title_activity_ejemplo_eventos">EjemploEventos</string>
+    <string name="tab_text_1">Tab 1</string>
+    <string name="tab_text_2">Tab 2</string>
+
+
     <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
 

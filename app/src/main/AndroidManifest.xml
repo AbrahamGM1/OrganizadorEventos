@@ -12,6 +12,11 @@
         android:theme="@style/Theme.OrganizadorEventos"
         tools:targetApi="31">
         <activity
+            android:name=".EjemploEventos"
+            android:exported="false"
+            android:label="@string/title_activity_ejemplo_eventos"
+            android:theme="@style/Theme.OrganizadorEventos.NoActionBar" />
+        <activity
             android:name=".EditarContraseniaActivity"
             android:exported="false"
             android:parentActivityName=".AjustesActivity"
@@ -51,10 +56,9 @@
 
 
         <activity
-                android:name=".AgregarInvitado"
-                android:exported="false"
-                android:parentActivityName=".InvitadosFragment"/>
-
+            android:name=".AgregarInvitado"
+            android:exported="false"
+            android:parentActivityName=".Invitados" />
         <activity
             android:name=".EditarTareaActivity"
             android:exported="false" />
