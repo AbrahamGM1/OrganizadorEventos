@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+        //Remove title bar
+        supportActionBar?.hide()
+
         //Wait 3 seconds and then go to the next activity
         Handler().postDelayed({
             val intent = Intent(this, InicioSesionActivity::class.java)
