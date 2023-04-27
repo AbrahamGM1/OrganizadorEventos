@@ -15,6 +15,9 @@ class RegistroActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_registro)
 
+        //Remove title bar
+        supportActionBar?.hide()
+
         //Initialize UI elements
         val email: EditText = findViewById(R.id.email)
         val password: EditText = findViewById(R.id.password)
