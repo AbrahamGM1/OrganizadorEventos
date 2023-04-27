@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
@@ -7,113 +7,118 @@
     android:orientation="vertical"
     android:background="@color/color_primary_dark">
 
-    <ImageView android:id="@+id/profile_imageView"
-        android:layout_marginTop="20dp"
-        android:layout_width="150dp"
-        android:layout_height="150dp"
-        android:layout_gravity="center"
-        android:src="@drawable/men_profile_picture"
-        />
-
     <LinearLayout
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-        <Button android:id="@+id/edit_username_button"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/edit_user_name"
-            android:textColor="@color/color_text_primary"
-            />
-
-        <Button android:id="@+id/edit_email_button"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/edit_email"
-            android:textColor="@color/color_text_primary"
-            />
-
-
-        <Button android:id="@+id/edit_password_button"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/edit_password"
-            android:textColor="@color/color_text_primary"
-            />
-
-        <Button android:id="@+id/logout_button"
-            android:layout_marginTop="20dp"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/logout"
-            android:textColor="@color/color_text_primary"
-            />
-
-    </LinearLayout>
-
-    <View
-        android:layout_marginHorizontal="40dp"
-        android:layout_marginTop="20dp"
         android:layout_width="match_parent"
-        android:layout_height="2dp"
-        android:background="@android:color/black"
-        />
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_gravity="center"
-        android:text="Aplicación"
-        android:textSize="26sp"
-        android:textColor="@color/white"
-        />
-
-    <LinearLayout
-        android:layout_marginTop="5dp"
-        android:layout_width="270dp"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:layout_gravity="center"
-        >
-
-        <Button android:id="@+id/language_button"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/settings_language"
-            android:textColor="@color/color_text_primary"
+        android:orientation="vertical">
+        <ImageView android:id="@+id/profile_imageView"
+            android:layout_marginTop="20dp"
+            android:layout_width="150dp"
+            android:layout_height="150dp"
+            android:layout_gravity="center"
+            android:src="@drawable/men_profile_picture"
             />
 
-        <Button android:id="@+id/notifications_button"
-            android:layout_marginTop="10dp"
-            android:layout_width="match_parent"
+        <LinearLayout
+            android:layout_width="270dp"
             android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/settings_notifications"
-            android:textColor="@color/color_text_primary"
-            />
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+            <Button android:id="@+id/edit_username_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/edit_user_name"
+                android:textColor="@color/color_text_primary"
+                />
 
-        <Button android:id="@+id/delete_account_button"
+            <Button android:id="@+id/edit_email_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/edit_email"
+                android:textColor="@color/color_text_primary"
+                />
+
+
+            <Button android:id="@+id/edit_password_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/edit_password"
+                android:textColor="@color/color_text_primary"
+                />
+
+            <Button android:id="@+id/logout_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/logout"
+                android:textColor="@color/color_text_primary"
+                />
+
+        </LinearLayout>
+
+        <View
+            android:layout_marginHorizontal="40dp"
             android:layout_marginTop="20dp"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:background="@drawable/rounded_button"
-            android:text="@string/settings_delete_account"
-            android:textColor="@color/color_text_primary"
-            android:textSize="16sp"
+            android:layout_height="2dp"
+            android:background="@android:color/black"
             />
 
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Aplicación"
+            android:textSize="26sp"
+            android:textColor="@color/white"
+            />
+
+        <LinearLayout
+            android:layout_marginTop="5dp"
+            android:layout_width="270dp"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center"
+            >
+
+            <Button android:id="@+id/language_button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/settings_language"
+                android:textColor="@color/color_text_primary"
+                />
+
+            <Button android:id="@+id/notifications_button"
+                android:layout_marginTop="10dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/settings_notifications"
+                android:textColor="@color/color_text_primary"
+                />
+
+            <Button android:id="@+id/delete_account_button"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/rounded_button"
+                android:text="@string/settings_delete_account"
+                android:textColor="@color/color_text_primary"
+                android:textSize="16sp"
+                />
+
+        </LinearLayout>
     </LinearLayout>
 
 
-</LinearLayout>
+</ScrollView>
