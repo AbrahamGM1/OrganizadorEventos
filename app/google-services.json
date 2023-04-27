@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "268875627881",
+    "project_id": "organizadoreventos-b6877",
+    "storage_bucket": "organizadoreventos-b6877.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:268875627881:android:7d55c972c4a1cd669011f8",
+        "android_client_info": {
+          "package_name": "gomez.abraham.organizadoreventos"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "268875627881-s95s106tk22ai13ejjanb9c0d1gv1201.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCxTiCS7vM-StFQnfR2fgTNeHMoR71mNXg"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "268875627881-s95s106tk22ai13ejjanb9c0d1gv1201.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

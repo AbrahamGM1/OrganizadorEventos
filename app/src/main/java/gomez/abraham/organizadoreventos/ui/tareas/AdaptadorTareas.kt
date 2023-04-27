@@ -37,7 +37,6 @@ class AdaptadorTareas: BaseAdapter {
         var tarea = tareas[p0]
         vista.check_tarea.isChecked = tarea.completada
         vista.tv_nombre_tarea.text = tarea.nombre
-        vista.tv_fecha_tarea.text = tarea.fecha
 
         return vista
     }

@@ -3,18 +3,35 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_eventos">
+    app:startDestination="@+id/nav_menu">
+
+    <fragment
+        android:id="@+id/nav_menu"
+        android:name="gomez.abraham.organizadoreventos.TabsFragment"
+        tools:layout="@layout/fragment_tabs"
+        >
+        <action
+            android:id="@+id/action_nav_menu_to_nav_eventos"
+            app:destination="@id/nav_eventos" />
+        <action
+            android:id="@+id/action_nav_menu_to_nav_presupuesto"
+            app:destination="@id/nav_presupuesto" />
+        <action
+            android:id="@+id/action_nav_menu_to_nav_tarea"
+            app:destination="@id/nav_tarea" />
+        <action
+            android:id="@+id/action_nav_menu_to_invitadosFragment"
+            app:destination="@id/nav_invitados" />
+        <action
+            android:id="@+id/action_nav_menu_to_nav_invitados"
+            app:destination="@id/nav_invitados" />
+    </fragment>
 
     <fragment
         android:id="@+id/nav_eventos"
         android:name="gomez.abraham.organizadoreventos.ui.eventos.EventosFragment"
         android:label="@string/menu_home"
-        tools:layout="@layout/fragment_eventos" >
-        <action
-            android:id="@+id/action_nav_eventos_to_nav_tarea"
-            app:destination="@id/nav_tarea"
-            app:popUpTo="@id/nav_tarea" />
-    </fragment>
+        tools:layout="@layout/fragment_eventos" />
 
     <fragment
         android:id="@+id/nav_tarea"
@@ -27,4 +44,9 @@
         android:name="gomez.abraham.organizadoreventos.ui.slideshow.PresupuestoFragment"
         android:label="@string/menu_slideshow"
         tools:layout="@layout/fragment_presupuesto" />
+    <fragment
+        android:id="@+id/nav_invitados"
+        android:name="gomez.abraham.organizadoreventos.InvitadosFragment"
+        android:label="Invitados"
+        tools:layout="@layout/fragment_invitados" />
 </navigation>

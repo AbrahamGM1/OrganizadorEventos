@@ -21,6 +21,12 @@
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:fitsSystemWindows="true"
+        android:background="@color/color_primary_dark"
+        app:itemTextColor="@color/color_text_secondary"
+        app:itemTextAppearance="@style/custom_style_text"
         app:headerLayout="@layout/nav_header_eventos"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+        app:itemBackground="@drawable/background_round_padded"
+        />
+
 </androidx.drawerlayout.widget.DrawerLayout>
