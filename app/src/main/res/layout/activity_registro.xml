@@ -76,15 +76,30 @@
             android:inputType="textPassword"
             android:paddingHorizontal="15dp"
             />
-        <TextView
-            android:id="@+id/remember_me"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center"
-            android:layout_marginTop="15dp"
-            android:text="@string/remember_me"
-            android:textColor="@color/white"
+        <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_gravity="center"
+        >
+            <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:text="@string/remember_me"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="15dp"
             />
+            <CheckBox
+                    android:id="@+id/remember_me"
+                    android:layout_width="25dp"
+                    android:layout_height="25dp"
+                    android:background="@drawable/checkbox_selectable"
+                    android:button="@null"
+                    android:buttonTint="@color/black"
+                    android:layout_gravity="center"
+            />
+        </LinearLayout>
         <View
             android:layout_width="match_parent"
             android:layout_height="2dp"
@@ -99,7 +114,7 @@
             android:layout_marginHorizontal="35dp"
             android:layout_marginTop="20dp"
             android:text="@string/register"
-            android:textColor="@android:color/white"
+            android:textColor="@color/color_text_primary"
             android:background="@drawable/rounded_border"
             />
         <Button
@@ -109,7 +124,7 @@
             android:layout_marginHorizontal="35dp"
             android:layout_marginTop="20dp"
             android:text="@string/login"
-            android:textColor="@android:color/white"
+            android:textColor="@color/color_text_primary"
             android:background="@drawable/rounded_border"
             />
 
