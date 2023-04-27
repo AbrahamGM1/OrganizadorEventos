@@ -1,13 +1,17 @@
 package gomez.abraham.organizadoreventos
 
+import android.content.Context
 import android.graphics.Color
 import android.os.Bundle
-import androidx.fragment.app.Fragment
+import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.LinearLayout
+import androidx.fragment.app.Fragment
 import androidx.viewpager.widget.ViewPager
 import com.google.android.material.tabs.TabLayout
+import java.util.Objects.requireNonNull
 
 // TODO: Rename parameter arguments, choose names that match
 // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
@@ -23,7 +27,6 @@ class TabsFragment : Fragment() {
     // TODO: Rename and change types of parameters
     private var param1: String? = null
     private var param2: String? = null
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         arguments?.let {
@@ -32,6 +35,8 @@ class TabsFragment : Fragment() {
         }
     }
 //////////////////
+lateinit var tabLayout:TabLayout
+
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
@@ -39,17 +44,57 @@ class TabsFragment : Fragment() {
         val tabLayout = view.findViewById<TabLayout>(R.id.tab_layout)
         tabLayout.tabMode = TabLayout.MODE_FIXED
         tabLayout.setBackgroundColor(Color.WHITE)
+
         viewPager.adapter = MyPagerAdapter(childFragmentManager)
+
+        this.tabLayout = tabLayout
+
         tabLayout.setupWithViewPager(viewPager)
+        (requireNonNull(tabLayout.getTabAt(0))?.view as LinearLayout).visibility = View.GONE
+
+
+}
+
+
+    override fun onResume() {
+        super.onResume()
+        val selectedTabPosition = tabLayout.selectedTabPosition
+        when (selectedTabPosition) {
+            1 -> {
+                // Si estamos en el segundo fragmento, seleccionamos el primer fragmento.
+                tabLayout.getTabAt(0)?.select()
+            }
+            2 -> {
+                // Si estamos en el tercer fragmento, seleccionamos el segundo fragmento.
+                tabLayout.getTabAt(0)?.select()
+            }
+            3 -> {
+                // Si estamos en el tercer fragmento, seleccionamos el segundo fragmento.
+                tabLayout.getTabAt(0)?.select()
+            }
+            else -> {
+                // Si estamos en cualquier otra posición, seleccionamos el primer fragmento.
+                tabLayout.getTabAt(0)?.select()
+            }
+        }
     }
+
+
+
 //////////////////
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_tabs, container, false)
+        val inflater =inflater.inflate(R.layout.fragment_tabs, container, false)
+
+
+    return inflater
+
     }
+
+
 
     companion object {
         /**

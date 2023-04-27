@@ -5,7 +5,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
+import android.widget.ArrayAdapter
 import android.widget.Button
+import android.widget.SearchView
 import android.widget.TextView
 import com.google.android.material.snackbar.Snackbar
 import com.google.android.material.navigation.NavigationView
@@ -20,6 +22,7 @@ import com.google.android.material.tabs.TabLayoutMediator
 import gomez.abraham.organizadoreventos.databinding.ActivityEventosBinding
 import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
 import gomez.abraham.organizadoreventos.ui.eventos.Evento
+import gomez.abraham.organizadoreventos.ui.eventos.EventosFragment
 import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
 import gomez.abraham.organizadoreventos.ui.tareas.Tarea
 import kotlinx.android.synthetic.main.fragment_tabs.*
@@ -44,19 +47,7 @@ class EventosActivity : AppCompatActivity() {
         setContentView(binding.root)
         /////////tabs
         val adapter:ViewPagerAdapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
-//            view_pager.adapter = adapter
-
-
-     //   TabLayoutMediator(tab_layout,view_pager){tab,position ->
-   //         when(position){
-   //             0->tab.text = "Tareas"
-  //              1->tab.text = "Invitados"
- //              2->tab.text = "Presupuesto"
- //           }
-//        }.attach()
-
-
-        //////
+        //////////////////
 
 
         setSupportActionBar(binding.appBarEventos.toolbar)
@@ -67,6 +58,7 @@ class EventosActivity : AppCompatActivity() {
             startActivity(intent)
         }
 
+
         //Buttons Navbar
         //val guestsButton: Button = findViewById(R.id.boton_invitados)
 
@@ -76,10 +68,11 @@ class EventosActivity : AppCompatActivity() {
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_menu,
-            R.id.nav_eventos, R.id.nav_eventos, R.id.nav_eventos), drawerLayout)
+            R.id.nav_menu, R.id.nav_menu, R.id.nav_menu), drawerLayout)
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
+        println(R.id.nav_menu)
+        println(R.id.nav_eventos)
 
 
         // OnClickListener to InvitadosActivity
@@ -91,9 +84,26 @@ class EventosActivity : AppCompatActivity() {
     }
 
 
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
+   override fun onCreateOptionsMenu(menu: Menu): Boolean {
         // Inflate the menu; this adds items to the action bar if it is present.
         menuInflater.inflate(R.menu.eventos, menu)
+        val buscar: MenuItem? = menu?.findItem(R.id.action_search)
+        val searchView = buscar?.actionView as SearchView
+
+        searchView.setOnQueryTextListener(object:SearchView.OnQueryTextListener{
+            override fun onQueryTextSubmit(p0: String?): Boolean {
+                p0?.let {
+                   TODO()
+                }
+                return false
+            }
+
+            override fun onQueryTextChange(p0: String?): Boolean {
+                TODO()
+            }
+
+        })
+
         return true
     }
 

@@ -15,7 +15,7 @@
         <item
             android:id="@+id/nav_eventos"
             android:title="Eventos"
-            android:visible="false"
+            android:visible="true"
             />
         <item
             android:id="@+id/nav_tarea"

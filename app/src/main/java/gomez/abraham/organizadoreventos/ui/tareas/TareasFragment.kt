@@ -1,17 +1,24 @@
 package gomez.abraham.organizadoreventos.ui.tareas
 
+import android.annotation.SuppressLint
 import android.os.Bundle
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
+import android.view.*
 import android.widget.Adapter
+import android.widget.ArrayAdapter
+import android.widget.Button
 import android.widget.ListView
+import android.widget.PopupMenu
 import android.widget.TextView
+import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import gomez.abraham.organizadoreventos.R
 import gomez.abraham.organizadoreventos.databinding.FragmentTareasBinding
 import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
 import kotlinx.android.synthetic.main.fragment_eventos.*
+import kotlinx.android.synthetic.main.layout_tareas.*
+import java.util.*
+import kotlin.collections.ArrayList
 
 class TareasFragment : Fragment() {
 
@@ -24,6 +31,7 @@ private var _binding: FragmentTareasBinding? = null
 
 
 
+  @SuppressLint("SuspiciousIndentation")
   override fun onCreateView(
     inflater: LayoutInflater,
     container: ViewGroup?,
@@ -42,8 +50,28 @@ private var _binding: FragmentTareasBinding? = null
         val adapter = AdaptadorTareas(requireContext(), tareas)
         listView.adapter = adapter
     }
+
+    val meses = ArrayAdapter<String>(this.requireContext(),android.R.layout.simple_spinner_dropdown_item)
+    meses.addAll(Arrays.asList("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"))
+      binding.spinnerMeses.adapter = meses
     return root
+
+
   }
+
+/*    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+
+
+        btn_pop_up.setOnClickListener{ v ->
+            val popupMenu: PopupMenu = PopupMenu(requireContext(),v)
+            popupMenu.menuInflater.inflate(R.menu.eventos, popupMenu.menu)
+
+
+
+        }
+
+    }*/
 
     fun tareasDePrueba(){
         tareas.add(Tarea(false, "prueba de tarea 1"))
@@ -51,6 +79,14 @@ private var _binding: FragmentTareasBinding? = null
         tareas.add(Tarea(false, "prueba de tarea 3"))
         tareas.add(Tarea(false, "prueba de tarea 4"))
         tareas.add(Tarea(false, "prueba de tarea 5"))
+        tareas.add(Tarea(false, "prueba de tarea 6"))
+        tareas.add(Tarea(false, "prueba de tarea 7"))
+        tareas.add(Tarea(false, "prueba de tarea 8"))
+        tareas.add(Tarea(false, "prueba de tarea 9"))
+        tareas.add(Tarea(false, "prueba de tarea 10"))
+        tareas.add(Tarea(false, "prueba de tarea 11"))
+        tareas.add(Tarea(false, "prueba de tarea 12"))
+        tareas.add(Tarea(false, "prueba de tarea 13"))
 
     }
 

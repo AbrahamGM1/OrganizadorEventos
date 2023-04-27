@@ -1,17 +1,19 @@
 package gomez.abraham.organizadoreventos.ui.eventos
 
-import android.media.Image
 import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
 import android.widget.ListView
 import androidx.fragment.app.Fragment
+import androidx.fragment.app.FragmentManager
+import androidx.fragment.app.FragmentTransaction
+import androidx.fragment.app.findFragment
 import androidx.lifecycle.ViewModelProvider
 import gomez.abraham.organizadoreventos.R
+import gomez.abraham.organizadoreventos.TabsFragment
 import gomez.abraham.organizadoreventos.databinding.FragmentEventosBinding
-import gomez.abraham.organizadoreventos.ui.tareas.AdaptadorTareas
+import gomez.abraham.organizadoreventos.ui.tareas.TareasFragment
 import kotlinx.android.synthetic.main.fragment_eventos.*
 
 class EventosFragment : Fragment() {
@@ -36,15 +38,38 @@ private var _binding: FragmentEventosBinding? = null
     val root: View = binding.root
     eventosDePrueba()
       var listView: ListView = binding.listviewEventos
+
       //val textView: TextView = binding.textHome
     eventosViewModel.text.observe(viewLifecycleOwner) {
       //textView.text = it
-        val adapter = AdaptadorEventos(requireContext(), eventos)
-        listView.adapter = adapter
+        adaptador = AdaptadorEventos(requireContext(), eventos)
+        listView.adapter = adaptador
+
     }
+      listView.setOnItemClickListener { adapterView, view, i, l ->
+          val myNewFragment = TareasFragment()
+          val fm: FragmentManager = requireActivity().supportFragmentManager
+          val transaction = fm.beginTransaction()
+          val oldFragment = view.findFragment<EventosFragment>()
+          transaction.replace(R.id.tabs_contenedor, myNewFragment)
+          transaction.addToBackStack(null)
+          transaction.commit()
+
+
+      }
+
 
     return root
   }
+
+    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
+        super.onViewCreated(view, savedInstanceState)
+        // create new fragment
+        // create new fragment
+
+        }
+
+
 
     fun eventosDePrueba(){
         eventos.add(Evento("Prueba de evento 1", null))
@@ -56,9 +81,9 @@ private var _binding: FragmentEventosBinding? = null
     }
 
 
+
     override fun onDestroyView() {
         super.onDestroyView()
         _binding = null
     }
 }
-
