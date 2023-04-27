@@ -20,6 +20,9 @@ class InicioSesionActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         FirebaseApp.initializeApp(this)
 
+        //Remove title bar
+        supportActionBar?.hide()
+
         binding = ActivityInicioSesionBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
