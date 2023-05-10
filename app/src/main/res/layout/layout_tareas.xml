@@ -2,6 +2,7 @@
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
+    xmlns:tools="http://schemas.android.com/tools"
     android:orientation="vertical"
     >
 
@@ -33,7 +34,7 @@
 
         <TextView
             android:id="@+id/tv_nombre_tarea"
-            android:layout_width="235dp"
+            android:layout_width="226dp"
             android:layout_height="wrap_content"
             android:text="Tarea"
             android:textColor="@color/white"
@@ -41,8 +42,15 @@
             android:layout_marginLeft="20dp"
             />
 
-
-
+        <Button
+            android:id="@+id/btn_pop_up"
+            android:layout_width="48dp"
+            android:layout_height="36dp"
+            android:text="..."
+            android:gravity="bottom"
+            android:textSize="14sp"
+            android:layout_marginRight="20dp"
+            />
 
 
     </LinearLayout>
