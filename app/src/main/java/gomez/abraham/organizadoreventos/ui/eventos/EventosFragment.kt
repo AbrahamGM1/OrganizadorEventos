@@ -36,7 +36,7 @@ private var _binding: FragmentEventosBinding? = null
 
     _binding = FragmentEventosBinding.inflate(inflater, container, false)
     val root: View = binding.root
-    eventosDePrueba()
+    //eventosDePrueba()
       var listView: ListView = binding.listviewEventos
 
       //val textView: TextView = binding.textHome
@@ -71,14 +71,14 @@ private var _binding: FragmentEventosBinding? = null
 
 
 
-    fun eventosDePrueba(){
+    /*fun eventosDePrueba(){
         eventos.add(Evento("Prueba de evento 1", null))
         eventos.add(Evento("Prueba de evento 2", null))
         eventos.add(Evento("Prueba de evento 3", null))
         eventos.add(Evento("Prueba de evento 4", null))
         eventos.add(Evento("Prueba de evento 5", null))
 
-    }
+    }*/
 
 
 

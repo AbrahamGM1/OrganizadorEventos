@@ -35,7 +35,7 @@ class AdaptadorEventos: BaseAdapter {
         var inflador = LayoutInflater.from(context)
         var vista = inflador.inflate(R.layout.layout_evento,null)
         var evento = Eventos[p0]
-        vista.tv_evento.text = evento.nombreEvento
+        vista.tv_evento.text = evento.nombre
 
         return vista
     }

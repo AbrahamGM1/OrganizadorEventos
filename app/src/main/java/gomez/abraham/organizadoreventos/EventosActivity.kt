@@ -59,12 +59,12 @@ class EventosActivity : AppCompatActivity() {
 
 
         setSupportActionBar(binding.appBarEventos.toolbar)
-        binding.appBarEventos.fab.setOnClickListener { view ->
+        /*binding.appBarEventos.fab.setOnClickListener { view ->
             Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
                 .setAction("Action", null).show()
             var intent = Intent(this, AgregarTareaActivity::class.java)
             startActivity(intent)
-        }
+        }*/
 
 
         //Buttons Navbar
