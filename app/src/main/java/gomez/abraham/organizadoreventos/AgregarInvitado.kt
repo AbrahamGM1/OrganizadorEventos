@@ -7,11 +7,10 @@ import android.widget.*
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.ktx.Firebase
+import gomez.abraham.organizadoreventos.models.Invitado
 
 class AgregarInvitado : AppCompatActivity() {
 
-    private lateinit var database: FirebaseDatabase
-    private lateinit var reference: DatabaseReference
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -21,14 +20,15 @@ class AgregarInvitado : AppCompatActivity() {
         supportActionBar?.setTitle("Agregar invitado")
 
         // Inicializar la base de datos
-        database = FirebaseDatabase.getInstance()
-        reference = database.getReference("eventos")
+        val database = FirebaseDatabase.getInstance()
+        val reference = database.getReference("eventos")
 
         // Obtener referencia a los views
         val nombreEditText: EditText = findViewById(R.id.nombre_edit)
         val apellidoEditText: EditText = findViewById(R.id.apellidos_edit)
         val telefonoEditText: EditText = findViewById(R.id.telefono_edit)
         val correoEditText: EditText = findViewById(R.id.correo_edit)
+        val direccionEditText: EditText = findViewById(R.id.direccion_edit)
         val agregarButton: Button = findViewById(R.id.add_guest_Button)
         val edadRadioGroup: RadioGroup = findViewById(R.id.edadRadioGroup)
         val generoRadioGroup: RadioGroup = findViewById(R.id.generoRadioGroup)
@@ -40,6 +40,7 @@ class AgregarInvitado : AppCompatActivity() {
             val apellido = apellidoEditText.text.toString()
             val telefono = telefonoEditText.text.toString()
             val correo = correoEditText.text.toString()
+            val direccion = direccionEditText.text.toString()
 
             val edadRadioButtonId = edadRadioGroup.checkedRadioButtonId
             val edadRadioButton: RadioButton = findViewById(edadRadioButtonId)
@@ -53,22 +54,24 @@ class AgregarInvitado : AppCompatActivity() {
             val confirmacionRadioButton: RadioButton = findViewById(confirmacionRadioButtonId)
             val confirmacion = confirmacionRadioButton.text.toString() == "Invitación aceptada"
 
-            val tipoMenu = "Platillo 2"
 
-            val invitado = hashMapOf(
-                "nombre" to nombre,
-                "apellido" to apellido,
-                "telefono" to telefono,
-                "correo" to correo,
-                "edad" to edad,
-                "genero" to genero,
-                "tipo_menu" to tipoMenu,
-                "confirmacion" to confirmacion
-             )
+            val tipoMenu = tipoMenuSpinner.selectedItem.toString()
+
+            val invitado = Invitado(
+                nombre,
+                apellido,
+                edad,
+                genero,
+                tipoMenu,
+                telefono,
+                correo,
+                direccion,
+                confirmacion
+            )
 
             Log.d("TAG", invitado.toString())
             val eventoId = "cL8wKxtfggGa5XV0U8EU"
-            reference.child(eventoId).child("invitados").push().setValue(invitado)
+            reference.child("eventos").child("invitados").push().setValue(invitado)
 
             Toast.makeText(
                 applicationContext,
