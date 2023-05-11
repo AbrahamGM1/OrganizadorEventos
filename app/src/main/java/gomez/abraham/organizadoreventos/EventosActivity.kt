@@ -1,6 +1,7 @@
 package gomez.abraham.organizadoreventos
 import ViewPagerAdapter
 import android.content.ClipData
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import android.os.Bundle
 import android.view.Menu
@@ -40,11 +41,18 @@ class EventosActivity : AppCompatActivity() {
     private lateinit var binding: ActivityEventosBinding
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
         binding = ActivityEventosBinding.inflate(layoutInflater)
         setContentView(binding.root)
+
+        val sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
+        val email = sharedPreferences.getString("email", "No email")
+        val nombre = sharedPreferences.getString("username", "No nombre")
+
+
         /////////tabs
         val adapter:ViewPagerAdapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
         //////////////////
@@ -74,6 +82,12 @@ class EventosActivity : AppCompatActivity() {
         println(R.id.nav_menu)
         println(R.id.nav_eventos)
 
+        //Set email and username in navbar
+        val headerView = navView.getHeaderView(0)
+        val navUsername = headerView.findViewById(R.id.user_display_name) as TextView
+        val navEmail = headerView.findViewById(R.id.user_email) as TextView
+        navUsername.text = nombre
+        navEmail.text = email
 
         // OnClickListener to InvitadosActivity
        // guestsButton.setOnClickListener {

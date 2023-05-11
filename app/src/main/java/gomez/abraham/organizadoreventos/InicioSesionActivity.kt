@@ -1,5 +1,6 @@
 package gomez.abraham.organizadoreventos
 
+import android.content.Context.MODE_PRIVATE
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
@@ -66,6 +67,15 @@ class InicioSesionActivity : AppCompatActivity() {
             if (task.isSuccessful) {
                 // Sign in success
                 Log.d("TAG", "signInWithEmail:success")
+                //Get user data
+                val user = auth.currentUser
+                val sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
+                val editor = sharedPreferences.edit()
+                //Add user data to local storage
+                editor.putString("email", email)
+                editor.putString("username", user?.displayName)
+                editor.apply()
+
                 Toast.makeText(baseContext, "Authentication success.", Toast.LENGTH_SHORT).show()
                 reload()
             } else {
