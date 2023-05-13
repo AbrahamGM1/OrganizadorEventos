@@ -1,6 +1,7 @@
 package gomez.abraham.organizadoreventos.ui.tareas
 
 import android.annotation.SuppressLint
+import android.content.Intent
 import android.os.Bundle
 import android.view.*
 import android.widget.Adapter
@@ -12,6 +13,9 @@ import android.widget.TextView
 import androidx.core.view.MenuProvider
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
+import gomez.abraham.organizadoreventos.AgregarEventoActivity
+import gomez.abraham.organizadoreventos.AgregarTareaActivity
+import gomez.abraham.organizadoreventos.EventosActivity
 import gomez.abraham.organizadoreventos.R
 import gomez.abraham.organizadoreventos.databinding.FragmentTareasBinding
 import gomez.abraham.organizadoreventos.ui.eventos.AdaptadorEventos
@@ -22,10 +26,8 @@ import kotlin.collections.ArrayList
 
 class TareasFragment : Fragment() {
 
-private var _binding: FragmentTareasBinding? = null
-  // This property is only valid between onCreateView and
-  // onDestroyView.
-
+    //Inicializamos las variables a usar en los métodos
+    private var _binding: FragmentTareasBinding? = null
     var tareas = ArrayList<Tarea>()
     private val binding get() = _binding!!
 
@@ -37,41 +39,41 @@ private var _binding: FragmentTareasBinding? = null
     container: ViewGroup?,
     savedInstanceState: Bundle?
   ): View {
-    val tareasViewModel =
-            ViewModelProvider(this).get(TareasViewModel::class.java)
+
+    val tareasViewModel = ViewModelProvider(this).get(TareasViewModel::class.java)
 
     _binding = FragmentTareasBinding.inflate(inflater, container, false)
+
     val root: View = binding.root
 
-      tareas.clear()
-      tareasDePrueba()
+    //Se limpian todas las tareas
+    tareas.clear()
+    //Se cargan todas las tareas (cambiar por consulta)
+    tareasDePrueba()
+
+    //Variable que almacena el listado de tareas que se mostrará dentro del fragment
     var listView: ListView = binding.listviewTareas
+
     tareasViewModel.text.observe(viewLifecycleOwner) {
+        //Muestra el listado de tareas
         val adapter = AdaptadorTareas(requireContext(), tareas)
         listView.adapter = adapter
     }
 
+      //Al pulsar el flotante se manda al activity de agregar tarea
+      binding.flotanteTareas.setOnClickListener {
+          var intent = Intent(this.requireContext(), AgregarTareaActivity::class.java)
+          startActivity(intent)
+      }
+
+    //Crea un arreglo con todos los meses y los mete dentro del spinner del fragment
     val meses = ArrayAdapter<String>(this.requireContext(),android.R.layout.simple_spinner_dropdown_item)
     meses.addAll(Arrays.asList("Enero", "Febrero", "Marzo", "Abril", "Mayo", "Junio", "Julio", "Agosto", "Septiembre", "Octubre", "Noviembre", "Diciembre"))
-      binding.spinnerMeses.adapter = meses
+    binding.spinnerMeses.adapter = meses
+
     return root
 
-
   }
-
-/*    override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
-        super.onViewCreated(view, savedInstanceState)
-
-
-        btn_pop_up.setOnClickListener{ v ->
-            val popupMenu: PopupMenu = PopupMenu(requireContext(),v)
-            popupMenu.menuInflater.inflate(R.menu.eventos, popupMenu.menu)
-
-
-
-        }
-
-    }*/
 
     fun tareasDePrueba(){
         tareas.add(Tarea(false, "prueba de tarea 1"))
@@ -89,7 +91,6 @@ private var _binding: FragmentTareasBinding? = null
         tareas.add(Tarea(false, "prueba de tarea 13"))
 
     }
-
 
 override fun onDestroyView() {
         super.onDestroyView()

@@ -18,6 +18,8 @@ class AdaptadorTareas: BaseAdapter {
 
 
     inner class TareasViewHolder(val v:View):RecyclerView.ViewHolder(v){
+
+        //Se inicializan todas las variables que son utilizadas dentro del fragmento de tareas
         var checkTarea:CheckBox
         var nombreTarea: TextView
         var mMenus: Button
@@ -28,6 +30,7 @@ class AdaptadorTareas: BaseAdapter {
             mMenus.setOnClickListener{popupMenus()}
         }
 
+        //Función para inflar los menús emergentes que saldran de las tareas
         private fun popupMenus(){
             val popupMenus = PopupMenu(context,v)
             popupMenus.inflate(R.menu.eventos)
@@ -60,10 +63,11 @@ class AdaptadorTareas: BaseAdapter {
         vista.tv_nombre_tarea.text = tarea.nombre
 
         vista.btn_pop_up.setOnClickListener {
+            //Se genera un nuevo menú emergente al pulsar el boton de los 3 puntos
             val popupMenus = PopupMenu(this.context,vista.btn_pop_up)
             popupMenus.inflate(R.menu.menu_tareas)
 
-            ///Menu popup de las tareas
+            ///Menu popup de las tareas, dependiendo de la opción seleccionada se hará una u otra cosa
             popupMenus.setOnMenuItemClickListener {
                 when(it.itemId){
                     R.id.popup_editar->{
@@ -77,13 +81,10 @@ class AdaptadorTareas: BaseAdapter {
                     else -> true
                 }
             }
+            //Se termina con .show para que se muestre
             popupMenus.show()
-            ///
 
         }
-
-
-
 
         return vista
     }

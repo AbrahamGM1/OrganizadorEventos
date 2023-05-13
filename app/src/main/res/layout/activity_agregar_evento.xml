@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".AgregarTareaActivity">
+
+    <EditText
+        android:id="@+id/txt_evento"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint=" Título del evento"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        />
+
+    <EditText
+        android:id="@+id/txt_extra"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="20dp"
+        android:hint=" Información extra"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        />
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:layout_gravity="center"
+
+        >
+
+        <EditText
+            android:id="@+id/txt_fecha"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:hint=" Fecha"
+            android:layout_marginRight="20dp"
+            android:background="@color/color_primary_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+
+        <EditText
+            android:id="@+id/txt_color"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:hint=" Color"
+            android:layout_marginLeft="20dp"
+            android:background="@color/color_primary_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            />
+
+
+
+    </LinearLayout>
+
+    <EditText
+        android:id="@+id/attachment_bar"
+        android:layout_width="300dp"
+        android:layout_height="45dp"
+        android:drawablePadding="8dp"
+        android:hint=" Adjuntar imagen..."
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center"
+        android:background="@color/color_primary_dark"
+        android:textColor="@color/white"
+        android:textColorHint="@color/white"
+        />
+
+    <ImageView
+        android:id="@+id/img_evento"
+        android:layout_marginTop="15dp"
+        android:layout_width="300dp"
+        android:layout_height="150dp"
+        android:layout_gravity="center"
+        />
+
+    <TextView
+        android:id="@+id/tv_evento"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="10dp"
+        android:text="Vista previa"
+        />
+
+    <Button
+        android:id="@+id/btn_agregar_evento"
+        android:layout_marginTop="20dp"
+        android:layout_width="300dp"
+        android:layout_height="60dp"
+        android:layout_gravity="center"
+        android:text="Agregar"
+        android:background="@drawable/round_button_tarea"
+        android:textSize="20sp"
+        android:textColor="@color/color_text_primary"
+        android:textAllCaps="false"/>
+
+
+
+</LinearLayout>
