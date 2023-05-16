@@ -6,6 +6,8 @@ import android.util.Log
 import android.widget.*
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
+import com.google.firebase.firestore.FieldValue
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 import gomez.abraham.organizadoreventos.models.Invitado
 
@@ -20,8 +22,9 @@ class AgregarInvitado : AppCompatActivity() {
         supportActionBar?.setTitle("Agregar invitado")
 
         // Inicializar la base de datos
-        val database = FirebaseDatabase.getInstance()
-        val reference = database.getReference("eventos")
+        //val database = FirebaseDatabase.getInstance()
+        //val reference = database.getReference("eventos")
+        val eventoRef = FirebaseFirestore.getInstance().collection("eventos").document("cL8wKxtfggGa5XV0U8EU")
 
         // Obtener referencia a los views
         val nombreEditText: EditText = findViewById(R.id.nombre_edit)
@@ -70,8 +73,7 @@ class AgregarInvitado : AppCompatActivity() {
             )
 
             Log.d("TAG", invitado.toString())
-            val eventoId = "cL8wKxtfggGa5XV0U8EU"
-            reference.child("eventos").child("invitados").push().setValue(invitado)
+            eventoRef.update("invitados", FieldValue.arrayUnion(invitado))
 
             Toast.makeText(
                 applicationContext,
