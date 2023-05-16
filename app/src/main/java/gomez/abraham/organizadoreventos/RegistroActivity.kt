@@ -34,6 +34,7 @@ class RegistroActivity : AppCompatActivity() {
         val username: EditText = findViewById(R.id.username)
         val btnRegister: Button = findViewById(R.id.sign_up_button)
         val alreadyHaveAccount: Button = findViewById(R.id.sign_in_button)
+        val rememberMe: CheckBox = findViewById(R.id.remember_me_register)
 
         //Set event listeners
         btnRegister.setOnClickListener {
@@ -45,7 +46,6 @@ class RegistroActivity : AppCompatActivity() {
             //On click btnAceptarTerminosCondiciones go to the next activity
             val btnAceptarTerminosCondiciones: Button = view.findViewById(R.id.accept)
             val btnCancelarTerminosCondiciones: TextView = view.findViewById(R.id.cancel)
-            val rememberMe: CheckBox = view.findViewById(R.id.remember_me)
 
             btnAceptarTerminosCondiciones.setOnClickListener {
 
