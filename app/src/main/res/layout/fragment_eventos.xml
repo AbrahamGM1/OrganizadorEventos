@@ -9,6 +9,9 @@
     android:id="@+id/eventos_contenedor"
     tools:context=".ui.eventos.EventosFragment" >
 
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent">
 
     <ListView
         android:id="@+id/listview_eventos"
@@ -16,5 +19,20 @@
         android:layout_height="match_parent">
     </ListView>
 
+
+    <com.google.android.material.floatingactionbutton.FloatingActionButton
+        android:id="@+id/flotante_eventos"
+        android:backgroundTint="@color/color_primary_dark"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="16dp"
+        app:srcCompat="@drawable/ic_add" />
+
+    </RelativeLayout>
 
 </LinearLayout>
