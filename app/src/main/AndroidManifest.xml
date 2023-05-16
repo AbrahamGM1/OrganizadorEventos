@@ -53,8 +53,7 @@
         </activity>
         <activity
             android:name=".AgregarInvitado"
-            android:exported="false"
-            android:parentActivityName=".Invitados" />
+            android:exported="false"/>
         <activity
             android:name=".EditarTareaActivity"
             android:exported="false" />

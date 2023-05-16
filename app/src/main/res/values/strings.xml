@@ -68,4 +68,13 @@
     <string name="settings_delete_account">Eliminar cuenta</string>
 
 
+    <!-- Tipo de menú values-->
+    <string-array name="tipos_menu">
+        <item>Seleccione</item>
+        <item>Adultos</item>
+        <item>Adolescentes</item>
+        <item>Niños</item>
+        <item>Dietetico</item>
+    </string-array>
+
 </resources>

@@ -131,8 +131,6 @@ private var _binding: FragmentEventosBinding? = null
             Toast.makeText(requireContext(),"Error al consultar",Toast.LENGTH_SHORT)
 
         }
-
-
     }
 
     override fun onDestroyView() {

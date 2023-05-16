@@ -6,6 +6,7 @@ import android.os.Bundle
 
 import android.os.Handler
 import androidx.core.content.ContextCompat.startActivity
+import com.google.firebase.FirebaseApp
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -15,6 +16,7 @@ class MainActivity : AppCompatActivity() {
         //Remove title bar
         supportActionBar?.hide()
 
+        FirebaseApp.initializeApp(this)
         //Wait 3 seconds and then go to the next activity
         Handler().postDelayed({
             val intent = Intent(this, InicioSesionActivity::class.java)

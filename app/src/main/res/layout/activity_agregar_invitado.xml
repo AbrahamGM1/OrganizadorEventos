@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -8,217 +8,228 @@
     android:layout_margin="10dp"
     tools:context=".AgregarInvitado">
 
-
-
     <LinearLayout
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:layout_gravity="center_horizontal"
-        >
-
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:hint="Nombre(s)"
-            android:layout_marginRight="50dp"
-            android:background="@color/color_primary_dark"
-            android:textColorHint="@android:color/white"
-            />
-
-        <EditText
-            android:layout_width="150dp"
-            android:layout_height="wrap_content"
-            android:hint="Apellidos"
-            android:background="@color/color_primary_dark"
-            android:textColorHint="@android:color/white"
-            />
-
-
-    </LinearLayout>
-
-    <GridLayout
-        android:layout_marginTop="15dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:rowCount="2"
-        android:columnCount="3"
-        android:alignmentMode="alignMargins"
-        android:columnOrderPreserved="false"
-        android:layout_gravity="center_horizontal"
-        >
-
-        <CheckBox
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="0"
-            android:layout_column="0"
-            android:text="Niño"
-            android:layout_marginRight="5dp"
-            android:textSize="14sp"
-            android:layout_width="110dp"
-
-            />
-
-        <CheckBox
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="0"
-            android:layout_column="1"
-            android:text="Adolescente"
-            android:layout_marginRight="5dp"
-            android:layout_width="110dp"
-            android:textSize="14sp"
-            />
-
-        <CheckBox
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="0"
-            android:layout_column="2"
-            android:text="Adulto"
-            android:textSize="14sp"
-            android:layout_width="110dp"
-            />
-
-        <CheckBox
-            android:layout_marginTop="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="1"
-            android:layout_column="0"
-            android:text="Mujer"
-            android:textSize="14sp"
-            android:layout_width="110dp"
-            />
-
-        <CheckBox
-            android:layout_marginTop="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="1"
-            android:layout_column="1"
-            android:text="Hombre"
-            android:textSize="14sp"
-            android:layout_width="110dp"
-            />
-
-        <CheckBox
-            android:layout_marginTop="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColor="@android:color/white"
-            android:layout_row="1"
-            android:layout_column="2"
-            android:text="Otro"
-            android:textSize="14sp"
-            android:layout_width="110dp"
-            />
-
-
-    </GridLayout>
-
-    <TextView
-        android:layout_marginTop="10dp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Tipo de Menú"
-        android:layout_marginHorizontal="20dp"
-        android:textSize="16sp"
-        />
-
-    <Spinner android:id="@+id/menu_spinner"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="20dp"
-        android:spinnerMode="dropdown"
-
-        />
-
-    <TextView
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="30dp"
-        android:layout_marginHorizontal="10dp"
-        android:textSize="32sp"
-        android:text="Datos de contacto"
-
-        />
-
-    <LinearLayout
-
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginHorizontal="10dp"
-        android:layout_marginTop="15dp"
+        android:layout_height="match_parent"
         android:orientation="vertical"
         >
-
-
-        <EditText
-            android:paddingStart="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColorHint="@android:color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Teléfono"
-            />
-
-        <EditText
-            android:paddingStart="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColorHint="@android:color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Correo"
-            android:layout_marginTop="20dp"
-            />
-
-        <EditText
-            android:paddingStart="5dp"
-            android:background="@color/color_primary_dark"
-            android:textColorHint="@android:color/white"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Dirección"
-
-            android:layout_marginTop="20dp"
-            />
-
         <LinearLayout
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginTop="25dp"
+            android:orientation="horizontal"
+            android:layout_gravity="center_horizontal"
             >
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <EditText android:id="@+id/nombre_edit"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text = "Invitación aceptada"
-                android:textSize="12sp"
-                android:layout_marginEnd="50dp"
+                android:hint="Nombre(s)"
+                android:layout_marginRight="50dp"
+                android:background="@color/color_primary_dark"
+                android:textColorHint="@android:color/white"
+                android:textColor="@color/white"
                 />
 
-            <Button
-                android:layout_width="0dp"
-                android:layout_weight="1"
+            <EditText android:id="@+id/apellidos_edit"
+                android:layout_width="150dp"
                 android:layout_height="wrap_content"
-                android:text="Invitación rechazada"
-                android:textSize="12sp"
+                android:hint="Apellidos"
+                android:background="@color/color_primary_dark"
+                android:textColorHint="@android:color/white"
+                android:textColor="@color/white"
                 />
+
 
         </LinearLayout>
 
-        <Button
-            android:id="@+id/add_guest_Button"
+
+            <RadioGroup
+                android:id="@+id/edadRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+
+                <RadioButton
+                    android:id="@+id/ninioRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Niño" />
+
+                <RadioButton
+                    android:id="@+id/adolescenteRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adolescente" />
+
+                <RadioButton
+                    android:id="@+id/adultoRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Adulto" />
+
+            </RadioGroup>
+
+            <RadioGroup
+                android:id="@+id/generoRadioGroup"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_gravity="center"
+                >
+
+                <RadioButton
+                    android:id="@+id/hombreRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hombre" />
+
+                <RadioButton
+                    android:id="@+id/mujerRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Mujer" />
+
+                <RadioButton
+                    android:id="@+id/otroRadioButton"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Otro" />
+
+            </RadioGroup>
+
+
+
+
+        <TextView
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tipo de Menú"
+            android:layout_marginHorizontal="20dp"
+            android:textSize="16sp"
+            />
+
+        <Spinner android:id="@+id/menu_spinner"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginHorizontal="50dp"
-            android:layout_marginTop="100dp"
-            android:text="Agregar"
-            android:textSize="16sp" />
+            android:layout_marginHorizontal="20dp"
+            android:spinnerMode="dropdown"
+            android:entries="@array/tipos_menu"
+            />
 
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="30dp"
+            android:layout_marginHorizontal="10dp"
+            android:textSize="32sp"
+            android:text="Datos de contacto"
+
+            />
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="10dp"
+            android:layout_marginTop="15dp"
+            android:orientation="vertical"
+            >
+
+
+            <EditText android:id="@+id/telefono_edit"
+                android:paddingStart="5dp"
+                android:background="@color/color_primary_dark"
+                android:textColorHint="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Teléfono"
+                android:textColor="@color/white"
+                />
+
+            <EditText android:id="@+id/correo_edit"
+                android:paddingStart="5dp"
+                android:background="@color/color_primary_dark"
+                android:textColorHint="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo"
+                android:layout_marginTop="20dp"
+                android:textColor="@color/white"
+                />
+
+            <EditText android:id="@+id/direccion_edit"
+                android:paddingStart="5dp"
+                android:background="@color/color_primary_dark"
+                android:textColorHint="@android:color/white"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dirección"
+                android:textColor="@color/white"
+                android:layout_marginTop="20dp"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_marginTop="5dp"
+                >
+
+                <RadioGroup
+                    android:id="@+id/confirmacion_group"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:layout_gravity="center"
+                    >
+
+
+                    <RadioButton
+                        android:id="@+id/invitacion_aceptada_radiobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text = "Invitación aceptada"
+                        android:textSize="12sp"
+                        android:layout_marginEnd="50dp" />
+
+                    <RadioButton
+                        android:id="@+id/invitacion_rechazada_radiobtn"
+                        android:layout_width="wrap_content"
+                        android:layout_weight="1"
+                        android:layout_height="wrap_content"
+                        android:text="Invitación rechazada"
+                        android:textSize="12sp"
+                        />
+
+                </RadioGroup>
+                <Button
+                    android:layout_width="0dp"
+                    android:layout_weight="1"
+                    android:layout_height="wrap_content"
+                    android:text = "Invitación aceptada"
+                    android:textSize="12sp"
+                    android:layout_marginEnd="50dp"
+                    />
+
+            </LinearLayout>
+
+            <Button
+                android:id="@+id/add_guest_Button"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="50dp"
+                android:layout_marginTop="100dp"
+                android:text="Agregar"
+
+                android:textSize="16sp" />
+
+        </LinearLayout>
     </LinearLayout>
 
 
-</LinearLayout>
+
+
+</ScrollView>

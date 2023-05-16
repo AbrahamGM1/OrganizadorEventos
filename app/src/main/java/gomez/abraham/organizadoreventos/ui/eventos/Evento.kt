@@ -1,4 +1,7 @@
 package gomez.abraham.organizadoreventos.ui.eventos
+import com.google.firebase.Timestamp
+import com.google.firebase.firestore.DocumentReference
+import gomez.abraham.organizadoreventos.models.Invitado
 
 // import com.google.firebase.Timestamp
 // import com.google.firebase.firestore.DocumentReference

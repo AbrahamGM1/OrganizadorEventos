@@ -58,7 +58,6 @@ class EventosActivity : AppCompatActivity() {
 
         setSupportActionBar(binding.appBarEventos.toolbar)
 
-
         //Buttons Navbar
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
