@@ -8,6 +8,7 @@
     tools:context=".AgregarTareaActivity">
 
     <EditText
+        android:id="@+id/et_titulo"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -19,6 +20,7 @@
         />
 
     <EditText
+        android:id="@+id/et_info"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -39,6 +41,7 @@
         >
 
         <EditText
+            android:id="@+id/et_fecha"
             android:layout_width="130dp"
             android:layout_height="45dp"
             android:hint=" Fecha"
@@ -48,14 +51,13 @@
             android:textColorHint="@color/white"
             />
 
-        <EditText
-            android:layout_width="130dp"
-            android:layout_height="45dp"
-            android:hint=" Color"
-            android:layout_marginLeft="20dp"
+
+
+        <Spinner
+            android:id="@+id/spinner_colores"
+            android:layout_width="match_parent"
+            android:layout_height="46dp"
             android:background="@color/color_primary_dark"
-            android:textColor="@color/white"
-            android:textColorHint="@color/white"
             />
 
 
@@ -93,6 +95,7 @@
         />
 
     <Button
+        android:id="@+id/btn_agregar_tarea"
         android:layout_marginTop="20dp"
         android:layout_width="300dp"
         android:layout_height="60dp"

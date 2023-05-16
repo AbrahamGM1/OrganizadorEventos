@@ -66,8 +66,8 @@
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/attachment_bar"
+    <Button
+        android:id="@+id/adjuntar_imagen"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:drawablePadding="8dp"

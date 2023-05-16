@@ -12,4 +12,6 @@ data class Evento(
     var imagen: String,
     var invitados: List<String>,
     var tareas: List<String>
-)
+) {
+    constructor() : this("", "", "", "", "", listOf(), listOf())
+}
