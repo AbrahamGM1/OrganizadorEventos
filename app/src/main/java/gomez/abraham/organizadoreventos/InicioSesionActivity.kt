@@ -29,6 +29,11 @@ class InicioSesionActivity : AppCompatActivity() {
 
         auth = Firebase.auth
 
+        val sharedPreferences = getSharedPreferences("user", MODE_PRIVATE)
+        if (sharedPreferences.getString("remember", "") == "true"){
+            binding.email.setText(sharedPreferences.getString("email", ""))
+        }
+
         binding.loginButton.setOnClickListener {
             val email = binding.email.text.toString()
             val password = binding.password.text.toString()
@@ -74,6 +79,7 @@ class InicioSesionActivity : AppCompatActivity() {
                 //Add user data to local storage
                 editor.putString("email", email)
                 editor.putString("username", user?.displayName)
+                editor.putString("remember", binding.rememberMe.isChecked.toString())
                 editor.apply()
 
                 Toast.makeText(baseContext, "Authentication success.", Toast.LENGTH_SHORT).show()

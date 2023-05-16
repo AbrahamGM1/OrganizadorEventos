@@ -7,6 +7,7 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.widget.Button
+import android.widget.CheckBox
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
@@ -44,6 +45,7 @@ class RegistroActivity : AppCompatActivity() {
             //On click btnAceptarTerminosCondiciones go to the next activity
             val btnAceptarTerminosCondiciones: Button = view.findViewById(R.id.accept)
             val btnCancelarTerminosCondiciones: TextView = view.findViewById(R.id.cancel)
+            val rememberMe: CheckBox = view.findViewById(R.id.remember_me)
 
             btnAceptarTerminosCondiciones.setOnClickListener {
 
@@ -64,6 +66,7 @@ class RegistroActivity : AppCompatActivity() {
                             //Add user data to local storage
                             editor.putString("email", email.text.toString())
                             editor.putString("username", username.text.toString())
+                            editor.putString("remember", rememberMe.isChecked.toString())
                             editor.apply()
                             // Sign in success, go to the next activity
                             val intent = Intent(this, EventosActivity::class.java)
