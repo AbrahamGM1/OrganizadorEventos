@@ -53,26 +53,16 @@ class EventosActivity : AppCompatActivity() {
         val nombre = sharedPreferences.getString("username", "No nombre")
 
 
-        /////////tabs
+        //Un adaptador viewPager para los tabs que se encontrarán dentro del activity
         val adapter:ViewPagerAdapter = ViewPagerAdapter(supportFragmentManager,lifecycle)
-        //////////////////
-
 
         setSupportActionBar(binding.appBarEventos.toolbar)
-        /*binding.appBarEventos.fab.setOnClickListener { view ->
-            Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
-                .setAction("Action", null).show()
-            var intent = Intent(this, AgregarTareaActivity::class.java)
-            startActivity(intent)
-        }*/
-
 
         //Buttons Navbar
-        //val guestsButton: Button = findViewById(R.id.boton_invitados)
-
         val drawerLayout: DrawerLayout = binding.drawerLayout
         val navView: NavigationView = binding.navView
         val navController = findNavController(R.id.nav_host_fragment_content_eventos)
+
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(setOf( R.id.nav_menu,
@@ -89,12 +79,6 @@ class EventosActivity : AppCompatActivity() {
         navUsername.text = nombre
         navEmail.text = email
 
-        // OnClickListener to InvitadosActivity
-       // guestsButton.setOnClickListener {
-       //     val intent = Intent(this, Invitados::class.java)
-      //      startActivity(intent)
-       // }
-
     }
 
 
@@ -104,7 +88,7 @@ class EventosActivity : AppCompatActivity() {
         val buscar: MenuItem? = menu?.findItem(R.id.action_search)
         val searchView = buscar?.actionView as SearchView
 
-        searchView.setOnQueryTextListener(object:SearchView.OnQueryTextListener{
+      /*  searchView.setOnQueryTextListener(object:SearchView.OnQueryTextListener{
             override fun onQueryTextSubmit(p0: String?): Boolean {
                 p0?.let {
                    TODO()
@@ -116,7 +100,7 @@ class EventosActivity : AppCompatActivity() {
                 TODO()
             }
 
-        })
+        }) */
 
         return true
     }

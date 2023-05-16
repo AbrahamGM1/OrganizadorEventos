@@ -8,19 +8,19 @@
     tools:context=".AgregarTareaActivity">
 
     <EditText
-        android:id="@+id/et_titulo"
+        android:id="@+id/txt_evento"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
         android:layout_marginTop="20dp"
-        android:hint=" Título de la tarea"
+        android:hint=" Título del evento"
         android:background="@color/color_primary_dark"
         android:textColor="@color/white"
         android:textColorHint="@color/white"
         />
 
     <EditText
-        android:id="@+id/et_info"
+        android:id="@+id/txt_extra"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:layout_gravity="center"
@@ -41,7 +41,7 @@
         >
 
         <EditText
-            android:id="@+id/et_fecha"
+            android:id="@+id/txt_fecha"
             android:layout_width="130dp"
             android:layout_height="45dp"
             android:hint=" Fecha"
@@ -51,21 +51,23 @@
             android:textColorHint="@color/white"
             />
 
-
-
-        <Spinner
-            android:id="@+id/spinner_colores"
-            android:layout_width="match_parent"
-            android:layout_height="46dp"
+        <EditText
+            android:id="@+id/txt_color"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:hint=" Color"
+            android:layout_marginLeft="20dp"
             android:background="@color/color_primary_dark"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
             />
 
 
 
     </LinearLayout>
 
-    <EditText
-        android:id="@+id/attachment_bar"
+    <Button
+        android:id="@+id/adjuntar_imagen"
         android:layout_width="300dp"
         android:layout_height="45dp"
         android:drawablePadding="8dp"
@@ -95,7 +97,7 @@
         />
 
     <Button
-        android:id="@+id/btn_agregar_tarea"
+        android:id="@+id/btn_agregar_evento"
         android:layout_marginTop="20dp"
         android:layout_width="300dp"
         android:layout_height="60dp"

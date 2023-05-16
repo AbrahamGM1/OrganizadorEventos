@@ -3,12 +3,18 @@ import com.google.firebase.Timestamp
 import com.google.firebase.firestore.DocumentReference
 import gomez.abraham.organizadoreventos.models.Invitado
 
+// import com.google.firebase.Timestamp
+// import com.google.firebase.firestore.DocumentReference
+
 
 data class Evento(
-    var nombre: String,
     var descripcion: String,
-    var fecha: Timestamp,
-    var imagen: DocumentReference,
-    var invitados: List<Invitado>,
+    var extra: String,
+    var fecha: String,
+    var color: String,
+    var imagen: String,
+    var invitados: List<String>,
     var tareas: List<String>
-)
+) {
+    constructor() : this("", "", "", "", "", listOf(), listOf())
+}
